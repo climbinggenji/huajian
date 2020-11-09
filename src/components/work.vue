@@ -5,23 +5,27 @@
       <div class="head">
         <h2 class="title">Work</h2>
         <ul>
-          <li :class="{'active': active=='retail'}" @click="handleNav('retail')">RETAIL</li>
-          <li :class="{'active': active=='brand'}" @click="handleNav('brand')">BRAND</li>
-          <li :class="{'active': active=='creativity'}" @click="handleNav('creativity')">CREATIVE</li>
+          <li :class="{'active': active=='retail'}" @click="handleNav('retail')">RETAIL <span>零售空间</span></li>
+          <li :class="{'active': active=='brand'}" @click="handleNav('brand')">BRAND <span>品牌设计</span></li>
+          <li :class="{'active': active=='creativity'}" @click="handleNav('creativity')">CREATIVE <span>创意设计</span></li>
+          <li :class="{'active': active=='interior'}" @click="handleNav('interior')">INTERIOR <span>地产设计</span></li>
         </ul>
       </div>
       <transition :name="scroll" mode="out-in">
         <router-view class="work-content"></router-view>
       </transition>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Header from "@/components/common/header";
+import Footer from "@/components/common/footer";
 export default {
   components: {
     Header,
+    Footer
   },
   data() {
     return {
@@ -54,7 +58,14 @@ export default {
         }
       }
       if (from.name == 'creativity') {
-        this.scroll = "scroll-right";
+        if (to.name == 'interior') {
+          this.scroll = "scroll-left";
+        } else {
+          this.scroll = "scroll-right";
+        }
+      }
+      if (from.name == 'interior') {
+        this.scroll = "scroll-right"
       }
     },
   },
@@ -65,7 +76,7 @@ export default {
 .work {
   padding-bottom: 100px;
   .head {
-    line-height: 64px;
+    line-height: 56px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -76,7 +87,8 @@ export default {
     .title {
       position: absolute;
       left: 0;
-      font-size: 55px;
+      font-size: 40px;
+      color: #b6b6b6;
       @media screen and (max-width: 500px) {
         position: relative;
         display: none;
@@ -85,23 +97,31 @@ export default {
     ul {
       display: flex;
       justify-content: space-between;
-      width: 500px;
+      width: 700px;
       @media screen and (max-width: 500px) {
         width: 100%;
       }
       li {
-        color: rgb(153, 153, 153);
-        font-size: 20px;
+        color: #b6b6b6;
+        font-size: 14px;
         font-family: NeueHaas, "Helvetica Neue", Helvetica, Arial, sans-serif;
         padding: 0 15px;
         &:hover {
           cursor: pointer;
-          color: rgb(26, 26, 26);
+          text-decoration: underline;
+        }
+        @media screen and (max-width: 500px) {
+          span {
+            display: none;
+          }
         }
       }
       .active {
-        color: rgb(26, 26, 26);
+        color: #c3ac90;
         border-bottom: 2px solid rgb(26, 26, 26);
+        span {
+          color: #000;
+        }
       }
     }
   }

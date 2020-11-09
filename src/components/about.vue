@@ -3,9 +3,9 @@
     <Header :active="'/about'" :white="true"></Header>
     <div class="about">
       <div class="pc">
-        <img src="@/assets/imgs/about_banner.png" alt />
-        <img src="@/assets/imgs/about_clients1.png" alt />
-        <img src="@/assets/imgs/about_clients2.png" alt />
+        <img src="@/assets/imgs/about.png" alt />
+        <!-- <img src="@/assets/imgs/about_clients1.png" alt />
+        <img src="@/assets/imgs/about_clients2.png" alt /> -->
       </div>
       <div class="mobile">
         <img src="@/assets/imgs/about_m1.png" />
@@ -22,23 +22,29 @@
         <img src="@/assets/imgs/about_m2.png" />
       </div>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Header from "@/components/common/header";
+import Footer from "@/components/common/footer";
 export default {
   components: {
     Header,
+    Footer
   },
 };
 </script>
 
 <style lang="less" scoped>
 .about {
-  min-width: 1280px;
+  max-width: 1454px;min-width: 1002px;
+  margin: 0 auto;
   .pc {
+    max-width: 1454px;min-width: 1002px;
     display: block;
+    margin: 0 auto;
   }
   .mobile {
     display: none;

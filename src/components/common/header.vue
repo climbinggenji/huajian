@@ -69,8 +69,8 @@ export default {
     justify-content: space-between;
     position: relative;
     img {
-      width: 60px;
-      height: 60px;
+      width: 51px;
+      height: 48px;
       margin-top: 10px;
       @media screen and (max-width: 500px) {
         margin-top: 0;
@@ -91,7 +91,6 @@ export default {
       }
     }
     ul {
-      background: #000;
       @media screen and (max-width: 500px) {
         position: absolute;
         top: 50px;
@@ -108,7 +107,7 @@ export default {
       li {
         line-height: 80px;
         font-weight: 700;
-        font-size: 18px;
+        font-size: 13px;
         a {
           color: #b6b6b6;
           &:hover {

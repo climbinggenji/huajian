@@ -20,7 +20,7 @@ html, body{
   width: 100%;
 }
 .contain {
-  width: 1280px;
+  max-width: 1454px;min-width: 1002px;
   margin: 0 auto;
   @media screen and (max-width: 500px){
     width: 100%;

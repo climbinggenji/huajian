@@ -179,13 +179,12 @@ export default {
         }
       }
     .title {
-      font-size: 24px;
+      font-size: 16px;
       line-height: 60px;
-      font-weight: 700;
+      font-weight: 600;
     }
     .preview {
       background-color: rgb(228, 228, 228);
-      height: 260px;
       cursor: pointer;
       overflow: hidden;
       img {

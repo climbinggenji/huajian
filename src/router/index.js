@@ -9,6 +9,8 @@ import contact from '@/components/contact'
 Vue.use(Router)
 
 export default new Router({
+  base: '/',
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -34,6 +36,11 @@ export default new Router({
           path: '/work/creativity',
           name: 'creativity',
           component: resolve => require(['@/components/work/creativity'], resolve)
+        },
+        {
+          path: '/work/interior',
+          name: 'interior',
+          component: resolve => require(['@/components/work/interior'], resolve)
         }
       ]
     },
