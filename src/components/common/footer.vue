@@ -9,9 +9,9 @@
       </div>
       <div class="footer-r">
           <div class="icon">
-              <a href=""><img src="@/assets/imgs/Be.png"></a>
-              <a href=""><img src="@/assets/imgs/zhanku.png"></a>
-              <a href=""><img src="@/assets/imgs/weibo.png"></a>
+              <a href="https://www.behance.net/NavashiDesign" target="_blank"><img src="@/assets/imgs/Be.png"></a>
+              <a href="https://www.zcool.com.cn/u/18144697" target="_blank"><img src="@/assets/imgs/zhanku.png"></a>
+              <a href="https://weibo.com/p/1006066795396882/home?from=page_100606&mod=TAB&is_all=1#place" target="_blank"><img src="@/assets/imgs/weibo.png"></a>
           </div>
           <div class="ewm">
               <img src="@/assets/imgs/erweima.png">

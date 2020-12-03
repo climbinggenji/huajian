@@ -35,6 +35,7 @@ export default {
   },
   created() {
     this.active = this.$route.name;
+    document.body.style.backgroundColor = '#fff'
   },
   methods: {
     handleNav(path) {

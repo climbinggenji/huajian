@@ -48,9 +48,17 @@ export default {
       }
     },
   },
+  mounted() {
+    document.body.style.paddingTop = '0'
+  },
   methods: {
     handleMenu() {
       this.showMenu = !this.showMenu;
+      if (this.showMenu) {
+        document.body.style.paddingTop = '60px';
+      } else {
+        document.body.style.paddingTop = '0';
+      }
     },
   },
 };
@@ -92,6 +100,7 @@ export default {
     }
     ul {
       @media screen and (max-width: 500px) {
+        background-color: #000;
         position: absolute;
         top: 50px;
         width: 100%;
@@ -126,6 +135,8 @@ export default {
 .showMenu {
   @media screen and (max-width: 500px) {
     position: fixed;
+    left: 0;
+    top: 0;
     z-index: 10;
     .header-content{
       ul {

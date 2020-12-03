@@ -44,6 +44,9 @@ export default {
     Header,
     Footer
   },
+  mounted() {
+    document.body.style.backgroundColor = '#000'
+  }
 };
 </script>
 

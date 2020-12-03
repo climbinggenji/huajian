@@ -76,6 +76,9 @@ export default {
       return arr;
     },
   },
+  mounted() {
+    document.body.style.backgroundColor = '#fff'
+  }
 };
 </script>
 
