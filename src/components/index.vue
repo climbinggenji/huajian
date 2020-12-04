@@ -112,6 +112,8 @@ export default {
 <style lang="less" scoped>
 .swiper {
   min-width: 1002px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 #ul {
   @media screen and (max-width: 501px) {
